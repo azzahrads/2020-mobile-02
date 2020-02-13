@@ -13,7 +13,7 @@
         android:scaleType="fitXY"
         android:src="@drawable/red_rectangle"
         app:layout_constraintTop_toTopOf="parent"
-        />
+        tools:layout_editor_absoluteX="16dp" />
 
     <ImageView
         android:layout_width="wrap_content"
@@ -28,27 +28,30 @@
     <ImageView
         android:layout_width="30dp"
         android:layout_height="30dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
         android:src="@drawable/left_arrow"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="24dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tv_service"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Continuing as \nService Provider"
-        app:layout_constraintTop_toBottomOf="@id/bg"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="24dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginLeft="24dp"
-        android:layout_marginEnd="24dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="28dp"
+        android:layout_marginEnd="28dp"
         android:fontFamily="@font/futura_pt_demibold"
+        android:text="Continuing as \nService Provider"
+        android:lineHeight="56dp"
+        android:textColor="#000"
         android:textSize="@dimen/title"
-        android:textColor="#000"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bg" />
 
     <Button
         android:id="@+id/login"
@@ -83,16 +86,6 @@
         app:layout_constraintTop_toBottomOf="@id/tv_service"
         android:textSize="@dimen/btn_text"/>
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/google_logo"
-        app:layout_constraintStart_toStartOf="@id/google"
-        app:layout_constraintTop_toTopOf="@id/google"
-        app:layout_constraintBottom_toBottomOf="@id/google"
-        android:layout_marginStart="18dp"
-        android:layout_marginLeft="18dp"/>
-
     <Button
         android:id="@+id/google"
         android:layout_width="match_parent"
@@ -107,20 +100,15 @@
         app:layout_constraintTop_toBottomOf="@id/register"
         app:layout_constraintEnd_toEndOf="parent"
         android:textAllCaps="false"
+        android:drawableLeft="@drawable/google_logo"
         android:fontFamily="@font/futura_pt_demibold"
         android:textColor="@color/red_text"
+        android:paddingStart="12dp"
+        android:paddingLeft="12dp"
+        android:paddingEnd="18dp"
+        android:paddingRight="18dp"
         android:textSize="@dimen/btn_text"
         android:text="Continue with Google"/>
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/fb_logo"
-        app:layout_constraintStart_toStartOf="@id/facebook"
-        app:layout_constraintTop_toTopOf="@id/facebook"
-        app:layout_constraintBottom_toBottomOf="@id/facebook"
-        android:layout_marginStart="18dp"
-        android:layout_marginLeft="18dp"/>
 
     <Button
         android:id="@+id/facebook"
@@ -128,14 +116,19 @@
         android:layout_height="wrap_content"
         android:text="Continue with Facebook"
         android:fontFamily="@font/futura_pt_demibold"
-        android:textColor="@color/red_text"
+        android:textColor="#3F51B5"
         android:textSize="@dimen/btn_text"
-        android:background="@drawable/btn_white_large"
+        android:background="@drawable/btn_blue_large"
         android:layout_marginStart="24dp"
         android:layout_marginRight="24dp"
         android:layout_marginEnd="24dp"
         android:layout_marginTop="8dp"
         android:textAllCaps="false"
+        android:drawableLeft="@drawable/fb_logo"
+        android:drawableStart="@drawable/fb_logo"
+        android:paddingLeft="12dp"
+        android:paddingEnd="12dp"
+        android:paddingRight="12dp"
         app:layout_constraintTop_toBottomOf="@id/google"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
