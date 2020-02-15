@@ -15,7 +15,8 @@
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginStart="28dp"
         android:layout_marginLeft="28dp"
-        android:layout_marginTop="18dp"/>
+        android:layout_marginTop="18dp"
+        android:onClick="back"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -80,6 +81,7 @@
         android:id="@+id/et_mobile"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:inputType="number"
         app:layout_constraintTop_toBottomOf="@id/et_email"
         android:hint="Mobile Number"
         android:layout_marginStart="28dp"
@@ -94,13 +96,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@id/et_mobile"
-        android:text="Country"
+        android:prompt="@string/choose"
         android:layout_marginStart="28dp"
         android:layout_marginRight="28dp"
         android:layout_marginEnd="28dp"
         android:layout_marginTop="28dp"
         android:padding="21dp"
         android:fontFamily="@font/futura_pt_demibold"
+        tools:entries="@array/country_arrays"
         />
 
     <EditText
@@ -110,6 +113,7 @@
         android:hint="Password"
         android:fontFamily="@font/futura_pt_demibold"
         android:paddingBottom="18dp"
+        android:inputType="textPassword"
         android:layout_marginStart="28dp"
         android:layout_marginRight="28dp"
         android:layout_marginEnd="28dp"
@@ -134,7 +138,6 @@
         android:id="@+id/et_referalcode"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="textPassword"
         android:hint="Referal Code (Optional)"
         android:fontFamily="@font/futura_pt_demibold"
         android:paddingBottom="18dp"
@@ -157,6 +160,7 @@
         android:textColor="#fff"
         android:text="Next"
         android:textAllCaps="false"
+        android:onClick="next"
         android:fontFamily="@font/futura_pt_demibold"
         app:layout_constraintTop_toBottomOf="@id/et_referalcode"
         app:layout_constraintStart_toStartOf="parent"
